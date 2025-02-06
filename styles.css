@@ -10,9 +10,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
-  background-color: #ffffff;
+
   text-align: center;
 }
 
@@ -30,17 +30,23 @@ h1 {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 10px;
+  border: 5px solid #ffc0cb;
+  border-radius: 5%;
   justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  padding: 10px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 img {
+  padding: 20px;
   width: 100%;
-  max-width: 400px; /* Giới hạn kích thước */
   height: auto;
-  max-height: 500px;
+  max-width: 400px;
+  max-height: 400px;
+  gap: 20px;
   transition: transform 0.3s ease-in-out;
 }
 
