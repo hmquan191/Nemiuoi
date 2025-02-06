@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ); // Tạo danh sách ảnh đã xáo trộn
 
   images.forEach((img, index) => {
-    img.src = "Pictures/InsideOut/demo.jpg"; // Đặt ảnh ban đầu là demo.jpg
+    img.src = "Pictures/InsideOut/box.png"; // Đặt ảnh ban đầu là demo.jpg
 
     img.addEventListener("click", () => {
       img.src = shuffledImages[index]; // Đổi ảnh thành ảnh ngẫu nhiên đã xáo trộn
