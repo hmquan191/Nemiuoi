@@ -1,0 +1,80 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.prompt {
+  font-family: "Borel";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(44, 177, 177);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  max-width: 400px; /* Giới hạn kích thước */
+  height: auto;
+  max-height: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .prompt {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-width: 300px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .prompt {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 250px;
+    max-height: 350px;
+  }
+}
