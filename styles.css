@@ -14,9 +14,7 @@ body {
   min-height: 100vh;
   padding: 20px;
   text-align: center;
-  background-image: url("./Pictures/background.png");
-  background-size: cover;
-  background-position: center;
+  background-color: #0e0d59;
 }
 
 h1 {

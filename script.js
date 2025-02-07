@@ -142,12 +142,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateButton = document.getElementById("generateButton");
   const memeCard = document.getElementById("memeCard");
 
-  const numberPicture = 14; // cap nhat theo so anh dang co;
+  const numberPicture = 34; // cap nhat theo so anh dang co;
 
   generateButton.addEventListener("click", () => {
     const randomNumber = Math.floor(Math.random() * numberPicture) + 1;
     // nho sua dinh dang anh
-    const randomImagePath = `./Pictures/Meme/${randomNumber}_meme.png`;
+    const randomImagePath = `./Pictures/Meme/${randomNumber}_nem.png`;
 
     // Set image source
 
