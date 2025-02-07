@@ -63,18 +63,20 @@ img:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9); /* Làm nền mờ 90% */
+  background: rgba(255, 255, 255);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 15px;
   width: 300px; /* Nhỏ gọn hơn */
   text-align: center;
   z-index: 1000;
+  font-weight: 400; /* Regular font weight */
 }
 
 .notification-box .message {
-  font-family: "Borel", cursive;
-  color: rgb(44, 177, 177);
+  font-family: "Bricolage Grotesque";
+  font-weight: 400;
+  color: #764884;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -104,6 +106,17 @@ img:hover {
 
 /* Responsive cho màn hình nhỏ */
 @media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .notification-box {
+      top: auto;
+      bottom: 12px; /* Đẩy xuống dưới */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%; /* Điều chỉnh chiều rộng để không bị tràn */
+      max-width: 350px;
+    }
+  }
+
   h1 {
     font-size: 1.8rem;
   }
