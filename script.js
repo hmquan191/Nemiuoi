@@ -142,22 +142,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateButton = document.getElementById("generateButton");
   const memeCard = document.getElementById("memeCard");
 
-  const numberPicture = 34; // cap nhat theo so anh dang co;
+  const numberPicture = 34; // Cập nhật theo số ảnh đang có
 
   generateButton.addEventListener("click", () => {
     const randomNumber = Math.floor(Math.random() * numberPicture) + 1;
-    // nho sua dinh dang anh
     const randomImagePath = `./Pictures/Meme/${randomNumber}_nem.png`;
 
-    // Set image source
+    // Preload ảnh trước khi hiển thị
+    const img = new Image();
+    img.src = randomImagePath;
 
-    memeCard.src = randomImagePath;
-    memeCard.style.display = "inline-block";
+    img.onload = () => {
+      memeCard.src = randomImagePath;
+      memeCard.style.display = "inline-block";
+      memeCard.alt = `Meme ${randomNumber}`;
+    };
 
-    memeCard.onerror = () => {
+    img.onerror = () => {
       console.error(`Image not found: ${randomImagePath}`);
-      memeCard.src = ""; // Clear the src to avoid showing a broken image icon
-      memeCard.alt = "Image not available";
       memeCard.style.display = "none";
     };
   });
