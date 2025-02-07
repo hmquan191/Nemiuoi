@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".container img");
   const promptText = document.querySelector(".prompt");
-  const countdownTimer = document.querySelector(".countdown-timer span");
 
   // Notification box elements
   const notificationBox = document.createElement("div");
