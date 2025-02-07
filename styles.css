@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #764884;
+  color: #ffffff;
 }
 
 body {
@@ -13,8 +13,10 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-
   text-align: center;
+  background-image: url("./Pictures/background.png");
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -30,16 +32,19 @@ h1 {
   font-family: "Bricolage Grotesque";
   font-weight: bold;
   font-size: 2rem;
-  color: rgb(44, 177, 177);
+  color: #a35fb8;
+  padding-bottom: 20px;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.699);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-wrap: wrap;
   padding: 40px;
   gap: 10px;
-  border: 5px solid #ffc0cb;
+  /* border: 5px solid #ffc0cb; */
+  border: 3px solid #9b62ff;
+  border-radius: 85px;
   justify-content: center;
   max-width: 1500px;
   margin: 0 auto;
@@ -111,39 +116,75 @@ img:hover {
 
 /* meme card section */
 
-.card-container {
+/* .card-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-}
+} */
 
 .button-container {
-  display: block;
+  display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding: 20px;
+  width: 100%;
 }
 
 .button {
   margin: 0;
-  padding: 10px 20px; /* Increase padding for a more button-like appearance */
+  padding: 20px 40px; /* Increase padding for a bigger button */
   box-sizing: border-box;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: rgba(116, 28, 187, 0.81);
+  background: rgba(115, 28, 187, 0.779);
   color: white;
   font-weight: bold;
-  border: none;
-  border-radius: 5px; /*Rounded corners for the button */
+  font-size: 1.5rem; /* Increase font size */
+  border-radius: 10px; /* Rounded corners for the button */
   cursor: pointer;
   transition: all 0.3s ease;
+
+  /* Tạo hiệu ứng viền shadow thay vì bóng lệch */
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.658);
 }
 
 button:hover {
-  background-color: rgba(140, 50, 220, 0.95);
+  background-color: rgb(141, 50, 220);
   color: white;
-  box-shadow: 0px 0px 15px 5px rgba(140, 50, 220, 0.6);
+
   transform: scale(1.05);
+}
+
+/* Firework effect container */
+.firework-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Firework particle */
+.firework-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 204, 0, 0.9);
+  border-radius: 50%;
+  animation: explode 0.6s ease-out forwards;
+}
+
+/* Firework explosion animation */
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translate(var(--x), var(--y));
+    opacity: 0;
+  }
 }
 
 /* Responsive cho màn hình nhỏ */

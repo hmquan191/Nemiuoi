@@ -79,9 +79,22 @@ document.addEventListener("DOMContentLoaded", () => {
     notificationBox.style.display = "block"; // Hiện thông báo
     notificationBox.style.position = "fixed"; // Đặt vị trí cố định
 
-    // Adjust position if the middle column is clicked, only on desktop
-    if (window.innerWidth > 768) {
-      // neu khong phai man hinh dien thoai
+    if (window.innerWidth >= 1505) {
+      // Khi width >= 1505px, giữ nguyên như ban đầu
+      if (index % 3 === 1) {
+        notificationBox.style.left = "75%";
+      } else {
+        notificationBox.style.left = "50%";
+      }
+    } else if (window.innerWidth >= 1042 && window.innerWidth <= 1504) {
+      // Khi width từ 1042 đến 1504px
+      if ([1, 3, 5, 7, 9].includes(index)) {
+        notificationBox.style.left = "25%"; // Lệch phải
+      } else {
+        notificationBox.style.left = "75%"; // Lệch trái
+      }
+    } else if (window.innerWidth > 735) {
+      // Khi width > 735px nhưng nhỏ hơn 1042px
       if (index % 3 === 1) {
         notificationBox.style.left = "75%";
       } else {
