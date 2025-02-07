@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startCountdown() {
-    let timeLeft = 1; // nho sua lai
+    let timeLeft = 10; // nho sua lai
     timerText.textContent = `⏳ ${timeLeft}s`;
     okButton.style.display = "none"; // Ẩn nút OK ban đầu
 
@@ -73,10 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
-  function showNotification(message) {
+  function showNotification(message, index) {
     messageText.textContent = message;
     notificationBox.style.display = "block"; // Hiện thông báo
     notificationBox.style.position = "fixed"; // Đặt vị trí cố định
+
+    // Adjust position if the middle column is clicked
+    if (index % 3 === 1) {
+      notificationBox.style.left = "75%";
+    } else {
+      notificationBox.style.left = "50%";
+    }
+
     startCountdown();
   }
 
@@ -93,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       promptText.textContent = ""; // Ẩn hướng dẫn
 
       images.forEach((other) => (other.style.pointerEvents = "none")); // Khóa tất cả hộp
-      showNotification(imagePhrases[imageName]); // Hiện notification
+      showNotification(imagePhrases[imageName], index); // Hiện notification
 
       okButton.addEventListener("click", () => {
         notificationBox.style.display = "none"; // Đóng hộp thông báo

@@ -63,11 +63,11 @@ img:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9); /* Làm nền mờ 90% */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 20px;
-  width: 400px;
+  padding: 15px;
+  width: 300px; /* Nhỏ gọn hơn */
   text-align: center;
   z-index: 1000;
 }
