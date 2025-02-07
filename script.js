@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "6_nem.png":
       "6. Lo âu (Anxiety) 🧡 – Có những ngày mọi thứ dường như rối ren và quá sức, nhưng bạn mạnh mẽ hơn bạn nghĩ rất nhiều. Hãy hít thở thật sâu, cho bản thân một chút thời gian và tiến từng bước nhỏ. Không cần phải vội vàng, vì mỗi bước bạn đi đều đáng giá!",
     "7_nem.png":
-      "7. Hạnh phúc (Joy) 💛 – Niềm vui không phải lúc nào cũng là những điều to lớn, mà đôi khi chỉ là một cái ôm, một cốc trà ấm hay một khoảnh khắc yên bình. Hãy cho phép bản thân tận hưởng những niềm vui nhỏ bé ấy, vì chúng là những viên gạch xây nên hạnh phúc thật sự!",
+      "7. Sợ hãi (Fear) 💜 – Nỗi sợ không có nghĩa là bạn yếu đuối, mà là dấu hiệu của sự quan tâm và ý thức về những gì quan trọng với bạn. Đừng để nó cản bước, hãy thử đối diện nó một cách nhẹ nhàng. Khi bạn dám bước qua ranh giới của mình, bạn sẽ nhận ra rằng mình mạnh mẽ hơn rất nhiều!",
     "8_nem.png":
       "8. Hạnh phúc (Joy) 💛 – Niềm vui không phải lúc nào cũng là những điều to lớn, mà đôi khi chỉ là một cái ôm, một cốc trà ấm hay một khoảnh khắc yên bình. Hãy cho phép bản thân tận hưởng những niềm vui nhỏ bé ấy, vì chúng là những viên gạch xây nên hạnh phúc thật sự!",
     "9_nem.png":
@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (timeLeft === 0) {
         clearInterval(countdownInterval);
+        timerText.textContent = "";
         okButton.style.display = "inline-block"; // Hiện nút OK
       }
     }, 1000);
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Adjust position if the middle column is clicked, only on desktop
     if (window.innerWidth > 768) {
+      // neu khong phai man hinh dien thoai
       if (index % 3 === 1) {
         notificationBox.style.left = "75%";
       } else {
@@ -115,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
   resetGame(); // Chạy game lần đầu
 });
 
-// Hàm xáo trộn mảng (Fisher-Yates shuffle)
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -123,3 +124,28 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const generateButton = document.getElementById("generateButton");
+  const memeCard = document.getElementById("memeCard");
+
+  const numberPicture = 14; // cap nhat theo so anh dang co;
+
+  generateButton.addEventListener("click", () => {
+    const randomNumber = Math.floor(Math.random() * numberPicture) + 1;
+    // nho sua dinh dang anh
+    const randomImagePath = `./Pictures/Meme/${randomNumber}_meme.png`;
+
+    // Set image source
+
+    memeCard.src = randomImagePath;
+    memeCard.style.display = "inline-block";
+
+    memeCard.onerror = () => {
+      console.error(`Image not found: ${randomImagePath}`);
+      memeCard.src = ""; // Clear the src to avoid showing a broken image icon
+      memeCard.alt = "Image not available";
+      memeCard.style.display = "none";
+    };
+  });
+});

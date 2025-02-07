@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #764884;
 }
 
 body {
@@ -21,8 +22,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+.generator {
+  padding-top: 20px;
+}
+
 .prompt {
-  font-family: "Borel";
+  font-family: "Bricolage Grotesque";
   font-weight: bold;
   font-size: 2rem;
   color: rgb(44, 177, 177);
@@ -104,6 +109,43 @@ img:hover {
   background: rgb(20, 150, 150);
 }
 
+/* meme card section */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: block;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin: 0;
+  padding: 10px 20px; /* Increase padding for a more button-like appearance */
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(116, 28, 187, 0.81);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /*Rounded corners for the button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(140, 50, 220, 0.95);
+  color: white;
+  box-shadow: 0px 0px 15px 5px rgba(140, 50, 220, 0.6);
+  transform: scale(1.05);
+}
+
 /* Responsive cho màn hình nhỏ */
 @media (max-width: 768px) {
   @media (max-width: 768px) {
@@ -114,6 +156,12 @@ img:hover {
       transform: translateX(-50%);
       width: 90%; /* Điều chỉnh chiều rộng để không bị tràn */
       max-width: 350px;
+    }
+    .img {
+      height: auto;
+      width: 100%;
+      max-width: 12cm;
+      max-height: 12cm;
     }
   }
 
