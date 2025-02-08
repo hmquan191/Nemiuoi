@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "9_nem.png":
       "9. Xấu hổ (Embarrassment) 💖 – Ai cũng có những khoảnh khắc vụng về hay lúng túng, và điều đó hoàn toàn bình thường. Đừng để một phút bối rối định nghĩa con người bạn. Hãy mỉm cười, vì chính những điều chưa hoàn hảo mới làm bạn trở nên đặc biệt và đáng yêu theo cách riêng!",
     "10_nem.png":
-      "10. Secret!!!: Yêu thương (Love) 💗 – Tình yêu không chỉ là những khoảnh khắc ngọt ngào mà còn là sự kiên nhẫn, thấu hiểu và chấp nhận cả những điều chưa hoàn hảo. Yêu thương không có nghĩa là lúc nào cũng rực rỡ, mà còn là khi bạn sẵn sàng ở bên ai đó trong những ngày tăm tối nhất. Và đừng quên, tình yêu không chỉ đến từ người khác – hãy học cách yêu thương chính mình, dịu dàng với những sai lầm của bản thân và trân trọng từng điều nhỏ bé làm nên con người bạn",
+      "10. Secret!!!: Yêu thương (Love) 💗 – Yêu thương không chỉ dành cho người khác mà còn cho chính bạn. Hãy trân trọng những người bên cạnh và cũng đừng quên dịu dàng với bản thân. Khi bạn trao đi yêu thương, thế giới cũng sẽ đáp lại bạn bằng những điều ấm áp nhất.",
   };
 
   let allImages = Object.keys(imagePhrases); // Danh sách toàn bộ ảnh
