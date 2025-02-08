@@ -14,7 +14,12 @@ body {
   min-height: 100vh;
   padding: 20px;
   text-align: center;
-  background-color: #0e0d59;
+
+  /* background-color: #0e0d59; */
+
+  background-image: url("./Pictures/bgbg.png");
+  background-size: cover;
+  background-position: top;
 }
 
 h1 {
