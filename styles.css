@@ -28,7 +28,7 @@ h1 {
 }
 
 .generator {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .prompt {
@@ -128,7 +128,6 @@ img:hover {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   padding: 20px;
   width: 100%;
 }
@@ -201,11 +200,12 @@ button:hover {
       width: 90%; /* Điều chỉnh chiều rộng để không bị tràn */
       max-width: 350px;
     }
-    .img {
+    img {
       height: auto;
       width: 100%;
       max-width: 12cm;
       max-height: 12cm;
+      aspect-ratio: 1 / 1; /* Ensure the image always looks like a square */
     }
   }
 
